@@ -23,7 +23,7 @@ class ResponseActions {
   // 配置 JSON 响应
   json = async (data: Record<string, any>, config: { status: number } = { status: 200 }) => {
     if (!this._tryLock()) return;
-    if (config?.status) this._status = config.status;
+    if (config && typeof config.status === 'number') this._status = config.status;
     this._headers['Content-Type'] = 'application/json';
     await this._send(data);
   };
