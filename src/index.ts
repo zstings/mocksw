@@ -30,7 +30,7 @@ class ResponseActions {
   // 配置文本响应
   text = async (content: string, config: { status: number } = { status: 200 }) => {
     if (!this._tryLock()) return;
-    if (config?.status) this._status = config.status;
+    if (config && typeof config.status === 'number') this._status = config.status;
     this._headers['Content-Type'] = 'text/plain';
     await this._send(content);
   };
