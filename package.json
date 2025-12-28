@@ -1,12 +1,12 @@
 {
-  "name": "sw-mock",
+  "name": "mocksw",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "author": "@zstings",
   "description": "一个基于 Service Worker 的轻量级、零侵入 API 模拟工具",
   "bin": {
-    "sw-mock": "./dist/cli.mjs"
+    "mocksw": "./dist/cli.mjs"
   },
   "files": [
     "dist",
@@ -51,12 +51,12 @@
   "keywords": [
     "mock",
     "service-worker",
-    "sw-mock"
+    "mocksw"
   ],
-  "homepage": "https://github.com/zstings/sw-mock#readme",
+  "homepage": "https://github.com/zstings/mocksw#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zstings/sw-mock.git"
+    "url": "git+https://github.com/zstings/mocksw.git"
   },
   "publishConfig": {
     "access": "public",

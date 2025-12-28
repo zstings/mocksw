@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: ['src/index.js'],
-      fileName: () => `sw-mock.js`,
+      fileName: () => `mocksw.js`,
       name: 'swMock',
       formats: ['es'],
     },

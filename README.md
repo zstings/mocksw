@@ -1,4 +1,4 @@
-# sw-mock
+# mocksw
 
 一个基于 Service Worker 的轻量级、零侵入 API 模拟工具。通过在 Service Worker 层拦截 fetch 请求，实现在本地开发环境中快速模拟 API 响应。
 
@@ -13,7 +13,7 @@
 ## 📦 安装
 
 ```sh
-npm install sw-mock -D
+npm install mocksw -D
 ```
 
 ## 🚀 快速开始
@@ -23,7 +23,7 @@ npm install sw-mock -D
 在你的项目根目录下运行初始化命令（通常是 public 文件夹）：
 
 ```sh
-npx sw-mock init public
+npx mocksw init public
 ```
 
 这将在你的公共目录下生成 `swMockWorker.js` worker环境。
@@ -33,7 +33,7 @@ npx sw-mock init public
 在你的应用入口文件（如 `main.ts` 或 `index.ts`）中进行配置：
 
 ```js
-import { httpRequest } from 'sw-mock';
+import { httpRequest } from 'mocksw';
 
 // 定义 Mock 接口
 httpRequest.post('/api/user/login', async ({ body }, res) => {
