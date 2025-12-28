@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 1. 获取用户输入的目录，默认为 'public'
-const targetDir = process.argv[2] || 'public';
+const targetDir = process.argv[3] || 'public';
 const targetPath = path.resolve(process.cwd(), targetDir);
 
 // 2. 确定源码中 swMockWorker.js 的位置
