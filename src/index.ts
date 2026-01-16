@@ -92,9 +92,9 @@ class MockClient {
     this.handlers.set(`OPTIONS:${url}`, callback);
   }
   // 2. 启动并监听 SW 的询问
-  async init(domain: string) {
+  async init(domain: string, path = './swMockWorker.js') {
     if (!('serviceWorker' in navigator)) return;
-    const registration = await navigator.serviceWorker.register('/swMockWorker.js');
+    const registration = await navigator.serviceWorker.register(path);
     await navigator.serviceWorker.ready;
     // 同步配置信息
     registration.active?.postMessage({ type: 'SET_CONFIG', domain });
