@@ -33,6 +33,15 @@ npx mocksw init public
 pnpm exec mocksw init public
 ```
 
+或者使用内置插件`(推荐)`：
+
+```ts
+import { mockswPlugin } from 'mocksw/vite';
+export default defineConfig({
+  plugins: [mockswPlugin()], // mockswPlugin('public') 支持显示指定目录
+});
+```
+
 这将在指定的目录 `public` 下生成 `swMockWorker.js` worker环境。
 
 ### 2. 定义 Mock 接口
