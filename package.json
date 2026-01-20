@@ -22,6 +22,11 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./vite": {
+      "types": "./dist/plugin.d.mts",
+      "import": "./dist/plugin.mjs",
+      "default": "./dist/plugin.mjs"
     }
   },
   "scripts": {

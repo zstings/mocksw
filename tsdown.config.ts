@@ -28,6 +28,15 @@ export default defineConfig([
     clean: true,
   },
   {
+    entry: 'src/plugin.ts',
+    platform: 'node',
+    format: ['esm'],
+    dts: {
+      build: true,
+    },
+    clean: true,
+  },
+  {
     entry: 'src/index.ts',
     platform: 'browser',
     format: ['esm'],

@@ -16,8 +16,6 @@ const targetPath = path.resolve(process.cwd(), targetDir);
 // 假设你的 sw 文件在库的根目录或某个特定目录
 const sourcePath = path.join(__dirname, '../public/swMockWorker.js');
 
-console.log(sourcePath);
-
 async function init() {
   try {
     // 检查目标目录是否存在，不存在则创建
