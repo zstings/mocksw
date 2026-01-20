@@ -96,6 +96,11 @@ class MockClient {
     if (!('serviceWorker' in navigator)) return;
     const registration = await navigator.serviceWorker.register(path);
     await navigator.serviceWorker.ready;
+    if (!navigator.serviceWorker.controller) {
+      await new Promise<void>(resolve => {
+        navigator.serviceWorker.addEventListener('controllerchange', () => resolve(), { once: true });
+      });
+    }
     // 同步配置信息
     registration.active?.postMessage({ type: 'SET_CONFIG', domain });
     // 监听来自 SW 的请求信号
